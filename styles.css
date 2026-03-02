@@ -164,17 +164,21 @@ h3 {
     padding: 20px;
 }
 
+#gallery {
+    margin: 2rem 0;
+}
 
 #gallery > p:first-of-type {
     text-align: left;
     line-height: 1.5;
+    color: var(--dark-charcoal);
+    margin-bottom: 2rem;
 }
 
-#gallery {
+#gallery-figs {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-    color: var(--dark-charcoal);
 }
 
 #gallery img {
@@ -187,6 +191,7 @@ figure {
     border-radius: 8px;
     background-color: var(--soft-white);
     box-shadow: 0 2px 6px var(--dark-charcoal);
+    min-width: 0;
 }
 
 figcaption {
@@ -202,6 +207,7 @@ figcaption {
     border-radius: 16px;
     padding: 20px;
     font-weight: bold;
+    margin: 2rem 0;
 }
 
 footer {
@@ -222,5 +228,11 @@ footer > a {
 }
 
 /* MEDIA QUERY (medium) */
+@media (min-width: 600px) {
+    #gallery-figs {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 /* MEDIA QUERY (large) */
 /* MEDIA QUERY (xl) */
